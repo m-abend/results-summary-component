@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --color-background: hsl(221, 100%, 96%);
+    --color-reaction:  hsl(0, 100%, 67%);
+    --color-memory: hsl(39, 100%, 56%);
+    --color-verbal: hsl(166, 100%, 37%);
+    --color-visual: hsl(234, 85%, 45%);
+    --color-summary: hsl(241, 72%, 46%, 0);
+
+    --background-color-reaction: hsla(0, 100%, 67%, 8%);
+    --background-color-memory: hsla(39, 100%, 56%, 8%);
+    --background-color-verbal: hsla(166, 100%, 37%, 8%);
+    --background-color-visual: hsla(234, 85%, 45%, 8%);
+  
+
+}
+@font-face {
+    font-family: "HankenGrotesk";
+    src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+body {
+    background-color: var(--color-background);
+    height: 100%;
+    font-family: "HankenGrotesk";
+    font-weight: 500, 700, 800;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.overview {
+    height: 60%;
+    width: 40em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.result {
+    height: 100%;
+    width: 45%;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 75%;
+    margin-top: 40px;
+}
+
+.result-box .result-header {
+    color: #CAC9FF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.result-box .circle {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    width: 160px;
+    height: 160px;
+    display: block;
+    background: linear-gradient(hsla(256, 72%, 46%, 80%),  hsla(241, 72%, 46%, 0));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-box .score {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.result-box .scoreOfhundred {
+    color: #8980F3;
+    font-weight: bold;
+}
+
+.result-box .statement {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.8px;
+}
+
+.result-box .motivation {
+    color: #CAC9FF;
+}
+
+.summary {
+    height: 90%;
+    width: 50%;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.summary-items {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-items > div {
+    width: 80%;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.summary-items .icon {
+    margin-top:4px; 
+}
+
+.summary-items .skill {
+    width: 5em;
+}
+
+.summary-items .score {
+    width: 80px;
+    text-align: right;
+    font-weight: bold;
+    color: #303B59;
+}
+
+.summary .header {
+    display: flex;
+    align-items: end;
+    align-content: end;
+    justify-content: start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.summary .subtitle {
+    color: #303B59;
+    font-size: 10px;
+    text-align: left;
+}
+
+.summary .onehundred {
+    color: #9799A8;
+}
+
+.summary-items .reaction {
+    color: var(--color-reaction);
+    background-color: var(--background-color-reaction);
+}
+
+.summary-items .memory {
+    color: var(--color-memory);
+    background-color: var(--background-color-memory);
+}
+
+.summary-items .verbal {
+   color: var(--color-verbal);
+   background-color: var(--background-color-verbal); 
+}
+
+.summary-items .visual {
+    color: var(--color-visual);
+    background-color: var(--background-color-visual);
+}
+
+
+.btn-continue {
+    background-color:#303B59;
+    border-radius: 50px !important;
+}
+
+.btn-continue a {
+    text-decoration: none;
+    color: white;
+}
